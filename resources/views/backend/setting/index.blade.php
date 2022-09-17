@@ -1,4 +1,5 @@
 @extends('backend.layouts.app')
+@section('title','Settings')
 @section('content')
 <div class="container-fluid">
     <!-- start page title -->

@@ -4,7 +4,7 @@
     <head>
         
         <meta charset="utf-8" />
-        <title>@if(site_title()){{site_title()}}@endif</title>
+        <title>@yield('title')</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Template" name="@if(isset($setting)){{$setting->meta_description}}@endif" />
         <meta content="" name="author" />

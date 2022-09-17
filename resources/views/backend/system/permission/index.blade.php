@@ -1,4 +1,6 @@
 @extends('backend.layouts.app')
+@section('title','Permissions')
+
 @section('content')
     <div class="container-fluid">
         <div class="row">
