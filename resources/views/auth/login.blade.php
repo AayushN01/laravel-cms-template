@@ -1,5 +1,5 @@
 @extends('backend.layouts.app')
-
+@section('title','Login')
 @section('guest')
 <div class="container-fluid">
     <!-- Log In page -->
@@ -17,15 +17,9 @@
         <div class="col-lg-3 pr-0">
             <div class="card mb-0 shadow-none">
                 <div class="card-body">
-                    @if(isset($setting) && !empty($setting->logo))
                     <h3 class="text-center m-0">
-                        <a href="#" class="logo logo-admin"><img src="{{asset('uploads/settings/logo')}}/{{$setting->logo}}" height="60" alt="logo" class="my-3"></a>
+                        <a href="#" class="logo logo-admin"><img src="#" height="60" alt="logo" class="my-3"></a>
                     </h3>
-                    @else
-                    <h3 class="text-center">
-                        <a href="#" class="logo logo-admin text-dark">Namaste</a>
-                    </h3>
-                    @endif
                     <div class="px-2 mt-2">
                         <h4 class="text-primary font-size-18 mb-2 text-center">Welcome Back !</h4>
                         <p class="text-muted text-center">Sign in to continue to Dashboard.</p>

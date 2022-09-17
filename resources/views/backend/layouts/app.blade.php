@@ -4,12 +4,12 @@
     <head>
         
         <meta charset="utf-8" />
-        <title>@if(isset($setting)){{$setting->website_name ? $setting->website_name : ''}}@endif</title>
+        <title>@if(site_title()){{site_title()}}@endif</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta content="Template" name="@if(isset($setting)){{$setting->meta_description ? $setting->meta_description : ''}}@endif" />
+        <meta content="Template" name="@if(isset($setting)){{$setting->meta_description}}@endif" />
         <meta content="" name="author" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="@if(isset($setting)){{asset('uploads/settings/favicon')}}/{{$setting->favicon ? $setting->favicon : ''}}@endif">
+        <link rel="shortcut icon" href="@if(site_icon()){{asset('uploads/settings/favicon')}}/{{site_icon()}}@endif">
 
         <link href="{{asset('backend/assets/libs/metrojs/release/MetroJs.Full/MetroJs.min.css')}}" rel="stylesheet" type="text/css" />
 
