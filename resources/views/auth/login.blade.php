@@ -1,17 +1,31 @@
-@extends('layouts.app')
+@extends('backend.layouts.app')
 
 @section('guest')
 <div class="container-fluid">
     <!-- Log In page -->
     <div class="row">
+        <div class="col-lg-9 p-0 vh-100  d-flex justify-content-center">
+            <div class="accountbg d-flex align-items-center"> 
+                <div class="account-title text-center text-white">
+                    <h4 class="mt-3 text-white">Welcome To <span class="text-warning">Login Page</span> </h4>
+                    <h1 class="text-white">Let's Get Started</h1>
+                    <p class="mt-3 font-size-14">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod.</p>
+                    <div class="border w-25 mx-auto border-warning"></div>
+                </div>
+            </div>
+        </div>
         <div class="col-lg-3 pr-0">
             <div class="card mb-0 shadow-none">
                 <div class="card-body">
-
+                    @if(isset($setting) && !empty($setting->logo))
                     <h3 class="text-center m-0">
-                        <a href="index.html" class="logo logo-admin"><img src="{{asset('assets/images/logo/logo_100x100.png')}}" height="60" alt="logo" class="my-3"></a>
+                        <a href="#" class="logo logo-admin"><img src="{{asset('uploads/settings/logo')}}/{{$setting->logo}}" height="60" alt="logo" class="my-3"></a>
                     </h3>
-
+                    @else
+                    <h3 class="text-center">
+                        <a href="#" class="logo logo-admin text-dark">Namaste</a>
+                    </h3>
+                    @endif
                     <div class="px-2 mt-2">
                         <h4 class="text-primary font-size-18 mb-2 text-center">Welcome Back !</h4>
                         <p class="text-muted text-center">Sign in to continue to Dashboard.</p>
@@ -61,21 +75,12 @@
                         </form>
                     </div>
                     <div class="mt-4 text-center">
-                        <p class="mb-0">© 2022 Accessworld Tech Pvt Ltd.<i class="mdi mdi-heart text-danger"></i></p>
+                        <p class="mb-0">© 2022 Aayush<i class="mdi mdi-heart text-danger"></i></p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-lg-9 p-0 vh-100  d-flex justify-content-center">
-            <div class="accountbg d-flex align-items-center"> 
-                <div class="account-title text-center text-white">
-                    <h4 class="mt-3 text-white">Welcome To <span class="text-warning">Access World Tech Pvt. Ltd</span> </h4>
-                    <h1 class="text-white">Let's Get Started</h1>
-                    <p class="mt-3 font-size-14">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet tellus ut tincidunt euismod.</p>
-                    <div class="border w-25 mx-auto border-warning"></div>
-                </div>
-            </div>
-        </div>
+
     </div>
     <!-- End Log In page -->
 </div>

@@ -23,6 +23,7 @@ Route::group(['middleware'=>'auth','prefix'=>'admin'], function(){
 
     Route::group(['as'=>'settings.','prefix'=>'settings'],function(){
         Route::get('/','System\SettingController@index')->name('index');
+        Route::post('/save-settings','System\SettingController@saveSettings')->name('save');
     });
 
     Route::group(['as'=>'permission.','prefix'=>'permission'],function(){
