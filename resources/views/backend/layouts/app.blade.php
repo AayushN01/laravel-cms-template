@@ -6,10 +6,10 @@
         <meta charset="utf-8" />
         <title>@yield('title')</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta content="Template" name="@if(isset($setting)){{$setting->meta_description}}@endif" />
+        <meta content="Template" name="" />
         <meta content="" name="author" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="@if(site_icon()){{asset('uploads/settings/favicon')}}/{{site_icon()}}@endif">
+        <link rel="shortcut icon" href="@if(!empty(setting())) {{asset('uploads/settings/favicon')}}/{{setting()->favicon}}@endif">
 
         <link href="{{asset('backend/assets/libs/metrojs/release/MetroJs.Full/MetroJs.min.css')}}" rel="stylesheet" type="text/css" />
 

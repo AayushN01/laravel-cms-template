@@ -17,9 +17,6 @@ class CreateSettingsTable extends Migration
             $table->id();
             $table->string('website_name')->nullable();
             $table->text('description')->nullable();
-            $table->string('meta_title')->nullable();
-            $table->text('meta_keyword')->nullable();
-            $table->text('meta_description')->nullable();
             $table->string('contact_1')->nullable();
             $table->string('contact_2')->nullable();
             $table->string('email')->nullable();

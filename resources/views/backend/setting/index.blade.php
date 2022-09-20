@@ -61,27 +61,6 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="card-header bg-white">
-                                <h4 class="text-center">SEO Settings</h4>
-                            </div>
-                            <div class="card-body">
-                                <div class="form-group">
-                                    <label for="meta">Meta title</label>
-                                    <input type="text" class="form-control" name="meta_title" placeholder="Meta title" value="{{old('meta_title',isset($setting->meta_title)?$setting->meta_title : '')}}">
-                                </div>
-                                <div class="form-group">
-                                    <label for="meta">Meta Description</label>
-                                    <textarea name="meta_description" id="meta_description" class="form-control" placeholder="Meta description">{{old('meta_description',isset($setting->meta_description)?$setting->meta_description : '')}}</textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label for="meta">Meta Keyword</label>
-                                    <input type="text" class="form-control" name="meta_keyword" placeholder="Meta Keyword" value="{{old('meta_keyword',isset($setting->meta_keyword)?$setting->meta_keyword : '')}}">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card-header bg-white">
                                 <h4 class="text-center">Logo & Favicon</h4>
                             </div>
                             <div class="card-body">

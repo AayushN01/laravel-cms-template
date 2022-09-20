@@ -31,9 +31,6 @@ class SettingController extends Controller
         if($setting){
             $setting->website_name = $request->website_name;
             $setting->description = $request->description;
-            $setting->meta_title = $request->meta_title;
-            $setting->meta_description = $request->meta_description;
-            $setting->meta_keyword = $request->meta_keyword;
             $setting->contact_1 = $request->contact_1;
             $setting->contact_2 = $request->contact_2;
             $setting->email = $request->email;
@@ -75,9 +72,6 @@ class SettingController extends Controller
             $setting = new Setting();
             $setting->website_name = $request->website_name;
             $setting->description = $request->description;
-            $setting->meta_title = $request->meta_title;
-            $setting->meta_description = $request->meta_description;
-            $setting->meta_keyword = $request->meta_keyword;
             $setting->contact_1 = $request->contact_1;
             $setting->contact_2 = $request->contact_2;
             $setting->email = $request->email;

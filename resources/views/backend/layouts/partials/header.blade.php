@@ -5,19 +5,19 @@
             <div class="navbar-brand-box">
                 <a href="index.html" class="logo logo-dark">
                     <span class="logo-sm">
-                        <img src="@if(site_logo()){{asset('uploads/settings/logo')}}/{{site_logo()}}@endif" alt="" height="50">
+                        <img src="" alt="" height="50">
                     </span>
                     <span class="logo-lg">
-                        <img src="@if(site_logo()){{asset('uploads/settings/logo')}}/{{site_logo()}}@endif" alt="" height="50">
+                        <img src="" alt="" height="50">
                     </span>
                 </a>
 
                 <a href="index.html" class="logo logo-light">
                     <span class="logo-sm">
-                        <img src="@if(site_logo()){{asset('uploads/settings/logo')}}/{{site_logo()}}@endif" alt="" height="50">
+                        <img src="" alt="" height="50">
                     </span>
                     <span class="logo-lg">
-                        <img src="@if(site_logo()){{asset('uploads/settings/logo')}}/{{site_logo()}}@endif" alt="" height="50">
+                        <img src="" alt="" height="50">
                     </span>
                 </a>
             </div>
@@ -31,8 +31,8 @@
             <div class="dropdown d-inline-block">
                 <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    @if(site_logo()) <img class="rounded-circle header-profile-user" src="{{asset('uploads/settings/logo')}}/{{site_logo()}}"
-                        alt="Header Avatar">@endif
+                    <img class="rounded-circle header-profile-user" src=""
+                        alt="Header Avatar">
                     <span class="d-none d-xl-inline-block ml-1">{{Auth::user()->name}}</span>
                     <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
                 </button>

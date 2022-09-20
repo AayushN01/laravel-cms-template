@@ -14,9 +14,6 @@ class Setting extends Model
     protected $fillable = [
         'website_name',
         'description',
-        'meta_title',
-        'meta_keyword',
-        'meta_description',
         'contact_1',
         'contact_2',
         'email',
