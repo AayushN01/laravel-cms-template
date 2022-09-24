@@ -39,6 +39,9 @@ Route::group(['middleware'=>'auth','prefix'=>'admin'], function(){
         Route::get('/','System\RoleController@index')->name('index');
         Route::get('/create','System\RoleController@create')->name('create');
         Route::post('/','System\RoleController@store')->name('store');
+        Route::get('/{role}/edit','System\RoleController@edit')->name('edit');
+        Route::put('/{role}','System\RoleController@update')->name('update');
+        Route::get('/{id}','System\RoleController@destroy')->name('destroy');
     });
 
     Route::group(['as'=>'user.','prefix'=>'user'],function(){

@@ -48,6 +48,7 @@ class RoleController extends Controller
 
         $role = $this->role->create(['name'=>$request->name,
                                     'guard_name'=>'web']);
+
         $role->syncPermissions($request->input('permissions'));
 
         return redirect()->route('role.index')->with('success','Role has been created successfully');
@@ -70,9 +71,12 @@ class RoleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Role $role)
     {
-        //
+        $rolePermission = $role->permissions;
+        $permissions = Permission::get();
+        $permission_groups = $permissions->groupBy('group_name') ->chunk(4);
+        return view('backend.system.role.edit',compact('role','rolePermission','permissions','permission_groups'));
     }
 
     /**
@@ -82,9 +86,13 @@ class RoleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(RoleRequest $request, Role $role)
     {
-        //
+        $role->name = $request->name;
+        $role->save();
+        $role->syncPermissions($request->input('permissions'));
+        return redirect()->route('role.index')->with('success','Role has been updated successfully');
+
     }
 
     /**
@@ -95,6 +103,12 @@ class RoleController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $role = $this->role->find($id);
+        if($role){
+            $role->delete();
+            return redirect()->back()->with('success','Role has been deleted successfully');
+        }
+        return redirect()->back()->with('error','Role not found');
+
     }
 }

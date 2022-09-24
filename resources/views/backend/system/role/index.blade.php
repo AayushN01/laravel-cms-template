@@ -20,7 +20,17 @@
                                     </button>
                                     {{Illuminate\Support\Facades\Session::get('success')}}
                                 </div>
-                            </div> <!--end toast-->    
+                            </div> <!--end toast--> 
+                            @elseif(Illuminate\Support\Facades\Session::has('error'))
+                            <div class="toast fade show bg-danger" role="alert" aria-live="assertive" aria-atomic="true" data-toggle="toast" style="margin-left: auto;
+                            margin-top: 10px;">
+                                <div class="toast-body text-white">
+                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    {{Illuminate\Support\Facades\Session::get('error')}}
+                                </div>
+                            </div> <!--end toast-->  
                             @endif
                         </div>
                         <h4 class="card-title mb-3">All Roles</h4>
@@ -42,8 +52,8 @@
                                                     <th>{{ ++$key }}</th>
                                                     <td>{{ $role->name }}</td>
                                                     <td>
-                                                        <a href="#" class="btn btn-warning btn-sm">Edit</a>
-                                                        <a href="#" class="btn btn-danger btn-sm">Delete</a>
+                                                        <a href="{{route('role.edit',$role->id)}}" class="btn btn-warning btn-sm">Edit</a>
+                                                        <a href="{{route('role.destroy',$role->id)}}" class="btn btn-danger btn-sm" onclick="confirm('Are you sure you want to delete this item?');">Delete</a>
                                                     </td>
                                                 </tr>
                                             @endforeach
